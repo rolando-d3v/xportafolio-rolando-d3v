@@ -1,7 +1,8 @@
 import React from 'react'
+import css from './layout_info.module.scss'
 
 export default function LayoutInfo() {
   return (
-    <div>LayoutInfo</div>
+    <div className={css.layout_info}  >LayoutInfo</div>
   )
 }
