@@ -1,0 +1,61 @@
+.toggle {
+  z-index: 90;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  border: none;
+ 
+  @media screen and (min-width: 640px) {
+    display: none;
+    
+  }
+  
+}
+
+
+.menu_btn__burger {
+  width: 36px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  // box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+  display: flex;
+
+}
+
+.menu_btn__burger::before,
+.menu_btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu_btn__burger::before {
+  transform: translateY(-12px);
+}
+.menu_btn__burger::after {
+  transform: translateY(12px);
+}
+/* ANIMATION */
+.toggle.open .menu_btn__burger {
+  transform: translateX(-30px);
+  background: transparent;
+  // box-shadow: none;
+}
+.toggle.open .menu_btn__burger::before {
+  transform: rotate(45deg) translate(20px, -20px);
+}
+.toggle.open .menu_btn__burger::after {
+  transform: rotate(-45deg) translate(20px, 20px);
+}

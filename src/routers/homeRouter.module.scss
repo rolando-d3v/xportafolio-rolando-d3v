@@ -1,0 +1,137 @@
+.homeRoter_principal {
+  // background-color: var(--theme-dark3);
+  // height: 100vh;
+  // display: grid;
+  // transition: 0.3s ease-in-out;
+
+  // grid-template-columns: 240px auto;
+  // grid-template-rows: 56px 1fr 30px;
+
+  // padding-right: 12px;
+  // padding-left: 12px;
+
+  // grid-template-areas:
+  //   " HEAD HEAD HEAD"
+  //   " CONT CONT CONT"
+  //   " FOOT FOOT FOOT ";
+
+  // background-image: linear-gradient(
+  //   -225deg,
+  //   #1f264d -20%,
+  //   var(--theme-dark3) 52%,
+  //   #0f111a 100%
+  // );
+  // background-size: 400% 400%;
+  // animation: 4s gradi infinite;
+
+  // background-color: #080809 #170e2f;
+
+
+
+
+
+  background-image: linear-gradient(
+    -225deg,
+    #000 -20%,
+    #170e2f 52%,
+    #02311d 100%,
+  );
+
+  overflow: hidden !important;
+  // background-size: 400% 400%;
+  // animation: 30s gradi infinite;
+
+  @keyframes gradi {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+}
+
+.open_side {
+  margin-left: 0px !important;
+}
+
+.principalDark {
+  background-color: var(--color-base01);
+}
+.principalDia {
+  background-color: var(--color-secundario03);
+}
+
+.content_layout {
+  margin-left: 240px;
+
+  border-radius: 0px 8px 8px 0px;
+  grid-area: CONT;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-secundario03);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-base02);
+  }
+
+  @media screen and (max-width: 1040px) {
+    margin-left: 0px;
+    border-radius: 8px;
+  }
+}
+
+.change_border {
+  border-radius: 8px 8px 8px 8px;
+}
+
+.contentDark {
+  transition: all 0.4s ease-in-out;
+  background-color: var(--color-base03);
+}
+.contentDia {
+  transition: all 0.4s ease-in-out;
+  background-color: var(--content-dark);
+
+  // cambio de barra de scroll de dia para modo noche
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--color-base02);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-secundario03);
+  }
+}
+
+.footer {
+  grid-area: FOOT;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 40px;
+  transition: 0.3s ease-in-out;
+
+  .text_footer {
+    color: white;
+    font-size: 11px;
+  }
+}
+
+.footerDark {
+  background-color: var(--color-base01);
+}
+.footerDia {
+  background-color: var(--color-secundario03);
+}

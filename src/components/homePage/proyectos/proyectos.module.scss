@@ -1,0 +1,126 @@
+// 1400px
+// 1280px
+// 1024px
+// 768px
+// 640px
+
+.proyectos_component {
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--theme-dark3);
+  // background-color: black;
+  position: relative;
+
+.content_title {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  .proyecto_title {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 900;
+    font-family: Dosis;
+  }
+  >img {
+    width: 60px;
+    margin-left: 10px;
+    border-radius: 50%;
+  }
+}
+
+  .proyectos_div {
+    width: 1100px;
+    // background-color: #7a7575;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+
+    @media screen and (max-width: 1200px) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 1fr;
+    }
+  }
+}
+
+.proyecto {
+  color: #fff;
+  // padding: 10px 0;
+
+  .content_nombre {
+    > img {
+      margin-left: 10px;
+      width: 22px;
+    }
+  }
+
+  .div_img {
+    margin-top: 20px;
+    > img {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+///////////////
+.content_text {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.24rem;
+  color: #fff;
+  width: 100%;
+
+
+  h4 {
+    // filter: brightness(0) invert(1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // animation: animationTextColor 10s ease-in-out infinite;
+  }
+
+  h4:nth-child(1) {
+    background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+  }
+  h4:nth-child(2) {
+    background-image: linear-gradient(90deg, #7928ca, #ff0080);
+    // animation-delay: 3.33s;
+  }
+  h4:nth-child(3) {
+    background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
+    // animation-delay: 6.66s;
+  }
+}
+
+
+//animation
+// @keyframes animationTextColor {
+//   0% {
+//     filter: brightness(0) invert(1);
+//   }
+//   11% {
+//     filter: none;
+//     transform: translateY(-10px);
+//   }
+//   33% {
+//     filter: none;
+//   }
+//   55% {
+//     filter: brightness(0) invert(1);
+//   }
+// }

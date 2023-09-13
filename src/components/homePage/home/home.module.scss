@@ -1,0 +1,223 @@
+// 1400px
+// 1280px
+// 1024px
+// 768px
+// 640px
+
+.home_component {
+  width: 100%;
+  // min-height: calc(100vh - 64px);
+  min-height: 100vh;
+
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--theme-dark3);
+  .home_div {
+    width: 1100px;
+    display: flex;
+
+    @media screen and (max-width: 1200px) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      width: 100%;
+
+      .home_info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+
+        .content_typical {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      .home_img {
+        width: 85%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+//home component info
+.home_info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+
+  .p_text {
+    position: relative;
+    .text_hola {
+      font-size: 24px;
+      font-weight: 600;
+      color: #60a5fa;
+      // color: #00dfd8;
+    }
+    .manito {
+      font-size: 26px;
+      position: absolute;
+      margin-left: 10px;
+      bottom: 4px;
+      animation: manitoAnimate 1s linear infinite;
+
+      @keyframes manitoAnimate {
+        0% {
+          transform: translate(0px);
+        }
+        50% {
+          transform: rotatez(50deg);
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .text_bienvenidos {
+    font-size: 24px;
+    font-weight: 600;
+    color: #60a5fa;
+  }
+
+  .content_text {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 3.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.24rem;
+    color: #fff;
+    width: 100%;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 2.4rem;
+      line-height: 2.4rem;
+      letter-spacing: -0.2rem;
+    }
+
+    span {
+      filter: brightness(0) invert(1);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animationTextColor 10s ease-in-out infinite;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    span:nth-child(1) {
+      background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+    }
+    span:nth-child(2) {
+      background-image: linear-gradient(90deg, #7928ca, #ff0080);
+      animation-delay: 3.33s;
+    }
+    span:nth-child(3) {
+      background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
+      animation-delay: 6.66s;
+    }
+  }
+
+  .content_typical {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 14px;
+
+    .text_typycal {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #60a5fa;
+      // color: #00dfd8;
+
+      &:hover {
+        color: #00dfd8;
+      }
+    }
+
+    .cat_gif {
+      width: 17%;
+    }
+  }
+
+  //components LINKS
+.header_link {
+  display: flex;
+  align-items: center;
+
+  .link_item {
+    display: flex;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.1rem;
+    height: 36px;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    transition: .3s ease-in-out all;
+
+    &:not(:first-child) {
+      margin-left: 32px;
+      @media screen and (max-width: 520px) {
+        margin-left: 20px;
+      }
+      @media screen and (max-width: 400px) {
+        margin-left: 8px;
+      }
+    }
+
+    &:hover {
+      color: #00dfd8;
+      border-bottom: 2px solid #60a5fa;
+    }
+  }
+}
+
+}
+
+//animation
+@keyframes animationTextColor {
+  0% {
+    filter: brightness(0) invert(1);
+  }
+  11% {
+    filter: none;
+  }
+  33% {
+    filter: none;
+  }
+  55% {
+    filter: brightness(0) invert(1);
+  }
+}
+
+//home component img
+.home_img {
+  width: 40%;
+  margin-left: 120px;
+  
+  > img {
+    width: 40%;
+    @media screen and (max-width: 1024px) {
+      width: 90%;
+    }
+  }
+}

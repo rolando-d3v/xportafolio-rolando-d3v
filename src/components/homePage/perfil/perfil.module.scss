@@ -1,0 +1,156 @@
+// 1400px
+// 1280px
+// 1024px
+// 768px
+// 640px
+
+.perfil_component {
+  width: 100%;
+  // min-height: calc(100vh - 64px);
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: var(--theme-dark4);
+  background-image: url("/perfil/wallman.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+
+  
+  &:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+  .perfil_div {
+    width: 1100px;
+    display: flex;
+    z-index: 40;
+
+    @media screen and (max-width: 1280px ) {
+      width: 90%;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+
+      .perfil_info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .content_img {
+          justify-content: center;
+        }
+      }
+      .perfil_servicios {
+        padding: 0;
+        width: 100%;
+        align-items: center;
+      }
+
+    }
+  }
+}
+
+
+//Components INFO
+.perfil_info {
+  width: 50%;
+  padding: 20px 0;
+  color: #fff;
+
+  .content_img {
+    padding: 0 0px;
+    display: flex;
+    align-items: center;
+
+    > img {
+      width: 40%;
+      border: 1px solid #000;
+      border-radius: 50%;
+      box-shadow: 0px 0px 14px 8px rgba(0,0,0,0.9);
+    }
+    > div {
+      margin-left: 20px;
+      > strong {
+        display: block;
+        font-size: 1.2rem;
+        font-family: Dosis, sans-serif;
+      }
+    }
+  }
+  .content_text {
+    margin-top: 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
+
+
+
+//Components SERVICIOS
+.perfil_servicios {
+  width: 50%;
+  padding: 20px 0;
+  // background-color: var(--theme-dark4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  
+  .content_serv {
+    color: #fff;
+    
+    > strong {
+      font-size: 2.2rem;
+      display: inline-block;
+    }
+    > p {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+  
+  .content_ofrezco {
+    margin-top: 16px;
+    color: #fff;
+
+    > strong {
+      font-size: 1.4rem;
+    }
+
+    .ul_list {
+      padding-left: 20px;
+      margin-top: 8px;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+
+  .gif_div {
+    margin-top: 36px;
+    display: flex;
+    justify-content: flex-end;
+
+    > img {
+      width: 74%;
+      border-radius: 4px;
+    }
+
+    @media screen and (max-width: 1000px){
+      justify-content: center;
+    }
+  }
+}

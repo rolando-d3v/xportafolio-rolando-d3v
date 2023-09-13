@@ -1,0 +1,61 @@
+@import "colores";
+@import "varibles";
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  // si haces scroll solo  no lo hace visible
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+
+  //personaliza el scroll del body
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--theme-dark3);
+  }
+
+  //resposive text
+  @media screen and (max-width: 520px) {
+    font-size: 13px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   // font-family: Dosis, sans-serif;
+// }
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//funcion para remover el scroll del body
+.removeScrollBody {
+  overflow: hidden;
+}
+
+//quita el scroll de un div o box
+.detscroll-hidden::-webkit-scrollbar {
+  display: none;
+}
