@@ -5,6 +5,7 @@
 
   display: grid;
   place-items: center;
+ 
 
   .section_tecno {
     position: relative;
@@ -33,7 +34,7 @@
       // background-color: rgb(35, 236, 9) !important;
     }
     @media screen and (min-width: 1100px) {
-      width: 1100px;
+      width: 1300px;
       height: 550px;
     }
   }
